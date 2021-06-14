@@ -1,0 +1,41 @@
+.blog-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.blog-heading {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 250px;
+    width: 100%;
+    background-color: aquamarine;
+    margin: 10px 0;
+}
+
+.blog-body {
+    display: flex;
+    justify-content: space-between;
+}
+
+.blog {
+    width: 100%;
+    margin-right: 10px;
+}
+
+.side-collumn {
+    width: 250px;
+    // background-color: gray;
+    margin-top: 10px;
+}
+
+.about-me-section {
+    background-color: brown;
+    height: 250px;
+    margin-bottom: 10px;
+}
+
+.popular-posts {
+    background-color: cadetblue;
+    height: 250px;
+}

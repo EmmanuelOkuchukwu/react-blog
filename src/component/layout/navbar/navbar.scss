@@ -1,0 +1,25 @@
+.navbar {
+   background-color: #212529;
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.links-wrapper {
+    display: flex;
+    list-style: none;
+    a {
+        margin: 0 10px;
+        text-decoration: none;
+        color: rgba(255, 255, 255, 0.55);
+    }
+}
+
+h1 {
+    color: #fff;
+}
