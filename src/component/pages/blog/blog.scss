@@ -9,24 +9,17 @@
     align-items: center;
     height: 250px;
     width: 100%;
-    background-color: aquamarine;
+    background-color: #fff;
     margin: 10px 0;
-}
-
-.blog-body {
-    display: flex;
-    justify-content: space-between;
+    h1 {
+        color: #000;
+    }
 }
 
 .blog {
     width: 100%;
     margin-right: 10px;
-}
-
-.side-collumn {
-    width: 250px;
-    // background-color: gray;
-    margin-top: 10px;
+    display: flex;
 }
 
 .about-me-section {

@@ -3,41 +3,38 @@ import './blog.scss';
 import Navbar from '../../layout/navbar/navbar';
 import { PostService } from '../../../service/postService';
 import PostCard from '../../layout/card/postCard';
+import { AuthService } from '../../../service/authService';
 
 export default function Blog() {
     const [posts, setPosts] = useState([]);
-    useEffect(()=> {
+    const currentUser = AuthService.getCurrentUser();
+    useEffect(() => {
         const fetchPosts = () => {
         PostService.getPosts()
             .then((result) => {
                 setPosts(result)
                 console.log('Data: ', result)
-            }).catch(err => console.log)
+            })
+            .catch(err => console.log(err));
         }
         return fetchPosts();
     },[])
-    
+
     return (
         <div className="main-container">
-            <Navbar />
+            <Navbar currentUser={currentUser} />
             <div className="blog-container">
                 <div className="blog-heading">
-                    <h1>Blog</h1>
+                    {currentUser ? (
+                        <h1>Welcome back {currentUser.user_nicename}</h1>
+                    ) : (
+                        <h1>Welcome to Reactive Blog</h1>
+                    )}
                 </div>
-                <div className="blog-body">
-                    <div className="blog">
-                        {posts?.map(post => (
-                            <PostCard post={post} />
-                        ))}
-                    </div>
-                    <div className="side-collumn">
-                        <div className="about-me-section">
-                            <h1>About Me</h1>
-                        </div>
-                        <div className="popular-posts">
-                            <h1>Popular Posts</h1>
-                        </div>
-                    </div>
+                <div className="blog">
+                    {posts?.map(post => (
+                        <PostCard post={post} />
+                    ))}
                 </div>
             </div>
         </div>
