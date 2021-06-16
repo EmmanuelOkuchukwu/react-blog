@@ -6,8 +6,12 @@ import PostCard from '../../layout/card/postCard';
 import { AuthService } from '../../../service/authService';
 
 export default function Blog() {
+    let _isMounted = false;
+
     const [posts, setPosts] = useState([]);
+    const [user, setUser] = useState([]);
     const currentUser = AuthService.getCurrentUser();
+
     useEffect(() => {
         const fetchPosts = () => {
         PostService.getPosts()
@@ -18,7 +22,7 @@ export default function Blog() {
             .catch(err => console.log(err));
         }
         return fetchPosts();
-    },[])
+    },[]);
 
     return (
         <div className="main-container">

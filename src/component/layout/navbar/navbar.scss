@@ -23,3 +23,21 @@
 h1 {
     color: #fff;
 }
+
+@media screen and (max-width: 500px) {
+    .nav {
+        padding: 0 10px;
+        h1 {
+            font-size: 25px;
+        }
+    }
+    .links-wrapper {
+        display: flex;
+        overflow-y: auto;
+        -ms-overflow-style: none;  /* IE and Edge */
+        scrollbar-width: none;
+        &::-webkit-scrollbar {
+            display: none;
+        }
+    }
+}
