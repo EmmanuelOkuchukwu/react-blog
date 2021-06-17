@@ -16,3 +16,18 @@
     height: auto;
     margin: 10px 0;
 }
+
+.read-more-btn {
+    border: none;
+    background-color: #212529;
+    color: #fff;
+    padding: 10px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 10px 0;
+    text-decoration: none;
+    &:hover {
+        color: lightslategrey;
+        transition: all 0.2s ease-in-out;
+    }
+}
