@@ -6,6 +6,7 @@ import Login from './component/pages/login/login';
 import Profile from './component/pages/profile/profile';
 import Post from './component/pages/posts/post';
 import { PrivateRoute } from './privateRoute';
+import About from "./component/pages/about/about";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route exact path="/" component={Blog} />
         <Route path="/login" component={Login} />
         <PrivateRoute path="/profile" component={Profile} />
+        <PrivateRoute path="/about" component={About} />
         <Route path="/post/:id" component={Post} />
       </Switch>
     </div>

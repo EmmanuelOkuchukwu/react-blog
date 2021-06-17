@@ -9,9 +9,15 @@
   position: relative;
   .user {
     position: absolute;
-    top: 45%;
-    left: 45%;
+    top: 20%;
+    left: 47%;
     color: #fff;
+    width: 150px;
+    text-align: center;
+    .user-placeholder {
+      width: 100%;
+      height: auto;
+    }
   }
 }
 
@@ -50,6 +56,7 @@
   width: 300px;
   text-align: center;
   background-color: #fff;
+  border-radius: 4px;
   h1 {
     color: #000;
     text-transform: uppercase;
@@ -75,6 +82,7 @@
   height: 370px;
   text-align: center;
   background-color: #fff;
+  border-radius: 4px;
   h1 {
     color: #000;
     text-transform: uppercase;
@@ -88,6 +96,7 @@
   width: 300px;
   text-align: center;
   background-color: #fff;
+  border-radius: 4px;
   h1 {
     color: #000;
     text-transform: uppercase;

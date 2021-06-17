@@ -32,6 +32,7 @@ function getUser() {
     })
         .then((response) => {
             if(response.status === 200) {
+                localStorage.setItem('userInfo', JSON.stringify(response.data));
                 return response.data;
             }
         })
