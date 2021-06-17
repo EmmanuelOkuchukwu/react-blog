@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import './postCard.scss';
 import axios from 'axios';
 import { Link } from 'react-router-dom';
+import moment from 'moment';
 
 const PostCard = ({ post }) => {
     const [image, setImage] = useState([]);
@@ -28,7 +29,8 @@ const PostCard = ({ post }) => {
                 </div>
                 <div className="card-body">
                     <p>{truncate(post?.content?.rendered, 200)}</p>
-                    <p>Written by{' '}{author}</p><br />
+                    <p>Written by{' '}{author}</p>
+                    <p>Date written:{' '}{moment(post?.date).format('MMMM Do YYYY')}</p><br />
                     <Link to={`/post/${post.id}`} className="read-more-btn">Read more</Link>
                 </div>
             </div>
